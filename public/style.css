@@ -1,0 +1,476 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1f21;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Video Background */
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(44, 62, 80, 0.9);
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img.dashboard-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.home-button, .btn-logout {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button {
+    background-color: #1abc9c;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+}
+
+.home-button:hover {
+    background-color: #16a085;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Main Content */
+.dashboard-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.dashboard-main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Levels Buttons */
+.levels-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.level-button {
+    background-color: #1abc9c;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.level-button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+/* Dynamic Content */
+.level-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: left;
+}
+
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1f21;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Allow scrolling */
+}
+
+/* Video Background */
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(44, 62, 80, 0.9); /* Semi-transparent for video visibility */
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    
+    z-index: 2; /* Keeps it above the video */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#welcomeMessage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+
+
+
+.btn-logout {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(52, 73, 94, 0.9); /* Semi-transparent for video visibility */
+    padding: 10px;
+    width: 100%;
+    z-index: 2; /* Keeps it above the video */
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.top-nav ul li {
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #1abc9c;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.top-nav ul li:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+/* Main Content Area */
+.main-content {
+    margin-top: 80px; /* Adjust for the navigation bar */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Subtle semi-transparent black */
+    color: white; /* Updated to ensure readability */
+    border-radius: 8px;
+    min-height: calc(100vh - 150px);
+    box-shadow: 0px 4px 6px rgba(224, 34, 34, 0.3);
+    z-index: 1;
+}
+
+
+/* Dashboard Widgets */
+.dashboard-widgets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Makes it responsive */
+    margin-top: 20px;
+}
+
+.widget {
+    background: white;
+    color: #34495e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    flex: 1;
+    margin: 10px;
+    max-width: 300px; /* Ensures widgets don't stretch too far */
+}
+
+.widget h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.widget p {
+    font-size: 1.5rem;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Login and Registration Forms */
+.login-container, .entry-container {
+    background-color: rgba(44, 62, 80, 0.9); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    z-index: 2;
+}
+
+.login-container h2, .entry-container h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #16a085;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #bdc3c7;
+}
+
+/* Level Buttons for Student Dashboard */
+.levels button {
+    margin: 10px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.levels button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-nav ul {
+        flex-direction: column;
+    }
+
+    .top-nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .dashboard-widgets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .widget {
+        width: 90%;
+    }
+}
+/* Tutorial Section Styles */
+.level-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent white */
+    color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    max-height: 70vh; /* Restrict height for long content */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+
+.level-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.level-content p.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.tutorial-image, .section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.interactive-section {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.interactive-section button {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.interactive-section button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+.event-details {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+
+/* Restrict image size for tutorial and sections */
+img, .tutorial-image, .section-image {
+    width: 100%;
+    max-width: 500px; /* Limit the image width */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center images */
+    border-radius: 10px; /* Add a slight rounded border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add depth */
+}
+
+/* Specific styles for smaller screen sizes */
+@media (max-width: 768px) {
+    img, .tutorial-image, .section-image {
+        max-width: 90%; /* Reduce size on smaller screens */
+    }
+}

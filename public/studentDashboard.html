@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="/media/stdashbrd_video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="logo">
+            <img src="/media/icon.png" alt="Icon" class="dashboard-icon">
+            <h1>Space Weather Emergency Simulation</h1>
+        </div>
+        <div class="header-buttons">
+            <button class="home-button" onclick="goHome()">Home</button>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="dashboard-main">
+        <h2>Welcome to Your Dashboard</h2>
+        <div class="levels-container">
+            <button class="level-button" onclick="showLevel1()">Level 1: Neural Network</button>
+            <button class="level-button" onclick="showLevel2()">Level 2: Emergency Management Tutorial</button>
+            <button class="level-button" onclick="showLevel3()">Level 3: Quiz</button>
+        </div>
+
+        <!-- Dynamic Content Area -->
+        <div id="levelContent" class="level-content">
+            <!-- Content will be loaded dynamically here -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

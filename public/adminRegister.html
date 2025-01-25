@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="/media/earth.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="entry-container">
+        <h2>Admin Registration</h2>
+        <form id="adminRegisterForm" onsubmit="adminRegister(event)">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required><br>
+        
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required><br>
+        
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+        
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required><br>
+        
+            <!-- Add hidden field for secret key -->
+            <input type="hidden" id="secretKey" value="Alina    ">
+        
+            <button type="submit">Register</button>
+        </form>
+        
+        <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

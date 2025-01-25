@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./media/logo.png" alt="Admin Logo">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="admin-profile">
+            <p id="welcomeMessage">Welcome, Admin</p>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <!-- Horizontal Navigation Bar -->
+    <nav class="top-nav">
+        <ul>
+            <li onclick="loadSummary()">Dashboard Overview</li>
+            <li onclick="loadStudentIDs()">Manage Student IDs</li>
+            <li onclick="loadStudentProgress()">View Student Progress</li>
+            <li onclick="loadQuizQuestions()">Manage Quiz Questions</li>
+            <li onclick="loadContent()">Manage Content</li>
+            <li onclick="loadStudentDetails()">View Student Details</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="adminContent">
+        <h2>Welcome to the Admin Dashboard</h2>
+        <div class="dashboard-widgets">
+            <div class="widget">
+                <h3>Total Students</h3>
+                <p id="totalStudents">Loading...</p>
+            </div>
+            <div class="widget">
+                <h3>Total Quiz Questions</h3>
+                <p id="totalQuizQuestions">Loading...</p>
+            </div>
+            <div class="widget">
+                <h3>Recent Logins</h3>
+                <p id="recentLogins">Loading...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
